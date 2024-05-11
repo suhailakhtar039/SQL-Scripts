@@ -6,6 +6,8 @@ CREATE TABLE cats (
 INSERT INTO cats(name, age)
 VALUES('PIXIE',4);
 
+INSERT INTO cats(name, age)
+VALUES('sunday',5);
 
-
+select * from cats;
 
