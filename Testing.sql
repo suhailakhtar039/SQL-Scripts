@@ -1,1 +1,3 @@
 CREATE DATABASE pet_shop;
+
+SHOW DATABASES;
