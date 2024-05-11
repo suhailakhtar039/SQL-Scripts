@@ -29,4 +29,11 @@ DESCRIBE CATS;
 -- deleting a table
 DROP TABLE cats;
 
+CREATE TABLE pastries(
+	name VARCHAR(50),
+    QUANTITY int
+);
+
+DROP TABLE pastries;
+
 
