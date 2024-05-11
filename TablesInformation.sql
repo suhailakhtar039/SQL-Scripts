@@ -20,4 +20,13 @@ breed VARCHAR(50),
 age INT
 );
 
+show tables;
+
+SHOW COLUMNS FROM cats;
+
+DESCRIBE CATS;
+
+-- deleting a table
+DROP TABLE cats;
+
 
