@@ -1,1 +1,1 @@
-select 9*9;
+CREATE DATABASE pet_shop;
