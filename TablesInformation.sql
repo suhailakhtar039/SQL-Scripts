@@ -36,4 +36,6 @@ CREATE TABLE pastries(
 
 DROP TABLE pastries;
 
+-- adding comments
+
 
