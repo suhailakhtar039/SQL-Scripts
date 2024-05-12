@@ -7,4 +7,12 @@ CREATE TABLE employees(
     current_status VARCHAR(50) NOT NULL DEFAULT 'employed'
 );
 
+SELECT * FROM employees;
+
 DESC employees;
+
+INSERT INTO employees(first_name, last_name, age)
+VALUES
+		('suhail', 'akhtar', 3),
+		('abc', 'xyz', 1),
+        ('hello', 'world', 5);
