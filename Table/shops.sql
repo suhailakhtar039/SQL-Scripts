@@ -10,3 +10,7 @@ VALUES('shoe emporium');
 
 INSERT INTO shops(name)
 VALUES('mario\'s clothes');
+
+INSERT INTO shops(name)
+VALUES("sports\"s shop");
+
