@@ -61,3 +61,19 @@ SELECT * FROM unique_cats;
 
 INSERT INTO unique_cats(name, age)
 VALUES('brian', 4);
+
+-- using auto increment
+CREATE TABLE unique_cats(
+	cat_id INT AUTO_INCREMENT,
+    name VARCHAR(50),
+    age INT,
+    PRIMARY KEY(cat_id)
+);
+
+SELECT * FROM unique_cats;
+
+
+
+
+
+
