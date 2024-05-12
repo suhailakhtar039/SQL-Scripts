@@ -72,6 +72,8 @@ CREATE TABLE unique_cats(
 
 SELECT * FROM unique_cats;
 
+DESC unique_cats;
+
 
 
 
