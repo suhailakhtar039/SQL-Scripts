@@ -20,3 +20,5 @@ VALUES
 -- update
 UPDATE employees SET last_name = 'rooster';
 
+UPDATE employees SET current_status = 'laid-off', last_name = 'who cares';
+
