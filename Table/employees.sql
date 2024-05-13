@@ -16,3 +16,7 @@ VALUES
 		('suhail', 'akhtar', 3),
 		('abc', 'xyz', 1),
         ('hello', 'world', 5);
+        
+-- update
+UPDATE employees SET last_name = 'rooster';
+
