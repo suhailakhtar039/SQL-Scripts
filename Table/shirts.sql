@@ -52,3 +52,8 @@ DELETE FROM shirts WHERE article='tank top';
 -- delete all table
 DELETE FROM shirts;
 
+-- drop table
+DROP TABLE shirts;
+
+-- creating database book shop
+CREATE DATABASE book_shop;
