@@ -47,3 +47,8 @@ SELECT cat_id FROM cats;
 SELECT name, breed FROM cats;
 
 SELECT cat_id, age FROM cats WHERE cat_id = age;
+
+-- aliases
+
+SELECT cat_id as id FROM cats;
+
