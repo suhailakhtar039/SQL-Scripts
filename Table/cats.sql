@@ -18,3 +18,9 @@ VALUES ('Ringo', 'Tabby', 4),
        ('Misty', 'Tabby', 13),
        ('George Michael', 'Ragdoll', 9),
        ('Jackson', 'Sphynx', 7);
+
+
+-- selecting differenct columns
+SELECT name, age FROM cats;
+
+
