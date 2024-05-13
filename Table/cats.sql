@@ -67,3 +67,6 @@ UPDATE cats SET age=12 WHERE breed='maine coon';
 DELETE FROM cats WHERE name='egg';
 SELECT * FROM cats;
 
+SELECT * FROM cats WHERE age=4;
+DELETE FROM cats WHERE age=4;
+
