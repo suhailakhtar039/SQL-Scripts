@@ -52,3 +52,14 @@ SELECT cat_id, age FROM cats WHERE cat_id = age;
 
 SELECT cat_id as id FROM cats;
 
+-- updating jackson's name
+
+SELECT * FROM cats WHERE name='jackson';
+UPDATE cats SET name='jack' WHERE name = 'jackson';
+SELECT * FROM cats WHERE name='jack';
+
+
+SELECT * FROM cats where breed = 'maine coon';
+UPDATE cats SET age=12 WHERE breed='maine coon';
+
+
