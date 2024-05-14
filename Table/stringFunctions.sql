@@ -25,10 +25,28 @@ SELECT SUBSTRING("HELLO WORLD",-2);
 SELECT CONCAT(SUBSTR(title, 1, 10),'...') AS short_title FROM books;
 
 -- initial of the author name
-SELECT CONCAT(
-	SUBSTR(author_fname, 1, 1),
-    ' ',
-    SUBSTR(author_lname, 1, 1))
-    AS initials
-FROM books;
+SELECT 
+    CONCAT(SUBSTR(author_fname, 1, 1),
+            ' ',
+            SUBSTR(author_lname, 1, 1)) AS initials
+FROM
+    books;
+
+
+-- using replace
+-- 2nd argument -> what to swap
+-- 3rd argument -> what to swap with
+SELECT 
+    REPLACE('chesse bread coffee milk',
+        ' ',
+        ' and ');
+
+
+
+
+
+
+
+
+
 
