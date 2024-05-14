@@ -47,9 +47,18 @@ SELECT REPLACE(title, 'e ', '3') FROM books;
 SELECT REPLACE(title, ' ', '-') FROM books;
 
 -- using reverse function
+SELECT REVERSE('suhail');
 
 SELECT REVERSE(title) FROM books;
 
+-- char length
+SELECT CHAR_LENGTH('HELLO');
+
+SELECT 
+    CHAR_LENGTH(title) AS len,
+    title
+FROM
+    books;
 
 
 
