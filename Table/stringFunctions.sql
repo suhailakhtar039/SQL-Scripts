@@ -42,6 +42,13 @@ SELECT
         ' and ');
 
 
+SELECT REPLACE(title, 'e ', '3') FROM books;
+ 
+SELECT REPLACE(title, ' ', '-') FROM books;
+
+-- using reverse function
+
+SELECT REVERSE(title) FROM books;
 
 
 
