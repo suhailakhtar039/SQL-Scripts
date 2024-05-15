@@ -39,6 +39,9 @@ INSERT INTO books
 SELECT * FROM books;
 
 
+SELECT author_lname FROM books;
 
+-- distinct
+SELECT DISTINCT author_lname FROM books;
 
 
