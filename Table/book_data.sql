@@ -152,5 +152,6 @@ SELECT * FROM books WHERE author_fname LIKE '_____';
 
 -- using % within LIKE charactors
 SELECT * FROM books WHERE title LIKE '%\%%';
+SELECT * FROM books WHERE title LIKE '%\_%';
 
 
