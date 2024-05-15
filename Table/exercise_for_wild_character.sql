@@ -42,12 +42,21 @@ ORDER BY author_lname , title;
 
 -- sorted alphabetically by last name
 
+-- SELECT 
+--     CONCAT('MY FAVORITE AUTHOR IS ',
+--             UCASE(author_fname),
+--             ' ',
+--             UCASE(author_lname),
+--             '!') AS yell
+-- FROM
+--     books
+-- ORDER BY author_lname;
 SELECT 
-    CONCAT('MY FAVORITE AUTHOR IS ',
-            UCASE(author_fname),
-            ' ',
-            UCASE(author_lname),
-            '!') AS yell
+    UCASE(CONCAT('MY FAVORITE AUTHOR IS ',
+                    UCASE(author_fname),
+                    ' ',
+                    UCASE(author_lname),
+                    '!')) AS yell
 FROM
     books
 ORDER BY author_lname;
