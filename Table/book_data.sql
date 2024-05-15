@@ -87,4 +87,7 @@ FROM
     books
 ORDER BY author;
 
+-- limit started
+SELECT * FROM books LIMIT 5;
+
 
