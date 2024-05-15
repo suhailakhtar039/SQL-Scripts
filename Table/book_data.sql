@@ -145,5 +145,12 @@ SELECT * FROM books WHERE author_fname LIKE '%da%';
 
 SELECT * FROM books WHERE title LIKE '%:%';
 
+-- underscore to denote number of characters
+
+SELECT * FROM books WHERE author_fname LIKE '_____';
+
+
+-- using % within LIKE charactors
+SELECT * FROM books WHERE title LIKE '%\%%';
 
 
