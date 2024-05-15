@@ -138,4 +138,10 @@ SELECT title FROM books LIMIT 5, 123219476457;
  
 SELECT title FROM books LIMIT 5, 50;
 
+-- wildcards started
+SELECT * FROM books WHERE author_fname = 'dave';
+
+SELECT * FROM books WHERE author_fname LIKE '%da%';
+
+
 
