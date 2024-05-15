@@ -41,7 +41,17 @@ SELECT * FROM books;
 
 SELECT author_lname FROM books;
 
--- distinct
+-- distinct started
+
+-- distinct last name
 SELECT DISTINCT author_lname FROM books;
+
+-- distinct full name
+SELECT DISTINCT
+    CONCAT(author_fname, ' ', author_lname)
+FROM
+    books;
+    
+-- starting order by
 
 
