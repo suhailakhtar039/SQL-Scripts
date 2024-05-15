@@ -143,5 +143,7 @@ SELECT * FROM books WHERE author_fname = 'dave';
 
 SELECT * FROM books WHERE author_fname LIKE '%da%';
 
+SELECT * FROM books WHERE title LIKE '%:%';
+
 
 
