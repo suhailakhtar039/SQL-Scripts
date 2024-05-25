@@ -37,6 +37,14 @@ FROM
     books
 GROUP BY author_lname;
 
+-- released year
+SELECT 
+    released_year, COUNT(*)
+FROM
+    books
+GROUP BY released_year
+ORDER BY COUNT(*) DESC;
+
     
     
     
