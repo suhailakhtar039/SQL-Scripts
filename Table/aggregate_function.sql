@@ -21,7 +21,14 @@ FROM
 SELECT DISTINCT author_fname FROM books;
     
 -- last name as well
-SELECT COUNT(DISTINCT author_lname) FROM books;    
+SELECT COUNT(DISTINCT author_lname) FROM books;
+
+SELECT 
+    COUNT(*)
+FROM
+    books
+WHERE
+    title LIKE '%the%';    
     
     
     
