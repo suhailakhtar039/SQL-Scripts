@@ -28,8 +28,19 @@ SELECT
 FROM
     books
 WHERE
-    title LIKE '%the%';    
+    title LIKE '%the%';
+    
+-- group by 'started'
+SELECT 
+    COUNT(*), author_lname
+FROM
+    books
+GROUP BY author_lname;
+
     
     
     
     
+
+
+
