@@ -15,3 +15,14 @@ SELECT
     COUNT(DISTINCT author_fname) AS no_of_authors
 FROM
     books;
+    
+    
+-- selecting distinct value as well
+SELECT DISTINCT author_fname FROM books;
+    
+-- last name as well
+SELECT COUNT(DISTINCT author_lname) FROM books;    
+    
+    
+    
+    
