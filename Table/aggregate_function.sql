@@ -68,7 +68,29 @@ FROM
 GROUP BY author_lname , author_fname;
 
 SELECT author_lname, MAX(released_year) FROM books group by author_lname;    
-SELECT author_lname,MAX(released_year), MIN(released_year) FROM books group by author_lname;    
+SELECT 
+    author_lname, MAX(released_year), MIN(released_year)
+FROM
+    books
+GROUP BY author_lname;    
 
-SELECT author_lname,MAX(released_year), MIN(released_year), COUNT(*) FROM books group by author_lname;
+SELECT 
+    author_lname,
+    MAX(released_year),
+    MIN(released_year),
+    COUNT(*)
+FROM
+    books
+GROUP BY author_lname;
 
+-- using sum
+SELECT SUM(pages) FROM books;
+
+SELECT 
+    author_lname, SUM(pages)
+FROM
+    books
+GROUP BY author_lname;
+
+-- using average 'avg'
+SELECT avg(released_year) FROM books;
