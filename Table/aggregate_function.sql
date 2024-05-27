@@ -132,7 +132,13 @@ WHERE
             MAX(pages)
         FROM
             books);
-            
+-- 2nd approach
+SELECT 
+    CONCAT(author_fname, ' ', author_lname) AS author
+FROM
+    books
+ORDER BY pages DESC
+LIMIT 1;            
 -- 6
 SELECT 
     released_year, COUNT(*), AVG(pages)
