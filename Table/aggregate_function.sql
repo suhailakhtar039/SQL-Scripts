@@ -48,6 +48,17 @@ ORDER BY COUNT(*) DESC;
 
 -- min and max
 SELECT MIN(released_year) FROM books;
+
+-- sub query
+SELECT 
+    pages, title
+FROM
+    books
+WHERE
+    pages = (SELECT 
+            MAX(pages)
+        FROM
+            books);
     
     
     
