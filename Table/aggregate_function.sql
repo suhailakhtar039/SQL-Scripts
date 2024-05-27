@@ -67,8 +67,8 @@ FROM
     books
 GROUP BY author_lname , author_fname;
 
-    
-    
+SELECT author_lname, MAX(released_year) FROM books group by author_lname;    
+SELECT author_lname,MAX(released_year), MIN(released_year) FROM books group by author_lname;    
 
 
 
