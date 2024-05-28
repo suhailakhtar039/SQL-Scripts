@@ -73,6 +73,14 @@ FROM
     books
 WHERE
     pages > 400 AND pages < 500;
+    
+
+SELECT 
+    title, released_year
+FROM
+    books
+WHERE
+    released_year BETWEEN 2004 AND 2014;
 
 
 
