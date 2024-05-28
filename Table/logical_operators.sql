@@ -21,4 +21,8 @@ SELECT * FROM books WHERE released_year >= 2010;
 
 SELECT * FROM books WHERE released_year <= 1985;
 
+-- logical and &&
+SELECT * FROM books WHERE author_lname = 'Eggers' && released_year > 2010;
+SELECT * FROM books WHERE author_lname = 'Eggers' and released_year > 2010;
+
 
