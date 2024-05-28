@@ -64,6 +64,15 @@ FROM
     books
 WHERE
     pages < 200 OR title LIKE '%stories%';
+    
+
+-- using between operator
+SELECT 
+    title, pages
+FROM
+    books
+WHERE
+    pages > 400 AND pages < 500;
 
 
 
