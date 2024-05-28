@@ -5,4 +5,7 @@ SELECT title FROM books WHERE released_year!=2013;
 SELECT title FROM books WHERE title LIKE '% %';
 SELECT title FROM books WHERE title NOT LIKE '% %';
 
+SELECT title FROM books WHERE title LIKE '%e%';
+SELECT title FROM books WHERE title NOT LIKE '%e%';
+
 
