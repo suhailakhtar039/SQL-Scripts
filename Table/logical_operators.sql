@@ -81,7 +81,24 @@ FROM
     books
 WHERE
     released_year BETWEEN 2004 AND 2014;
+    
+-- using IN operator
+SELECT 
+    title, author_lname
+FROM
+    books
+WHERE
+    author_lname = 'carver'
+        OR author_lname = 'lahiri'
+        OR author_lname = 'smith';
 
+
+SELECT 
+    title, author_lname
+FROM
+    books
+WHERE
+    author_lname in ('carver', 'lahiri', 'smith');
 
 
 
