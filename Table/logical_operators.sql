@@ -98,7 +98,15 @@ SELECT
 FROM
     books
 WHERE
-    author_lname in ('carver', 'lahiri', 'smith');
+    author_lname IN ('carver' , 'lahiri', 'smith');
+    
+-- using modulo operator
+SELECT 
+    title, released_year
+FROM
+    books
+WHERE
+    released_year >= 2000 AND released_year % 2 != 0;
 
 
 
