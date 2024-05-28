@@ -138,7 +138,8 @@ SELECT
 FROM
     books
 ORDER BY pages DESC
-LIMIT 1;            
+LIMIT 1;
+            
 -- 6
 SELECT 
     released_year, COUNT(*), AVG(pages)
