@@ -61,4 +61,13 @@ ADD COLUMN employee_count INT NOT NULL DEFAULT 1;
 -- dropping column
 ALTER TABLE companies DROP COLUMN phone;
 
+-- renaming table
+RENAME TABLE companies to suppliers;
+
+
+ALTER TABLE suppliers RENAME TO companies;
+
+-- renaming column name
+ALTER TABLE companies
+RENAME COLUMN name TO company_name;
 
