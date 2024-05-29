@@ -50,3 +50,11 @@ CREATE TABLE houses (
   CONSTRAINT sprice_gt_pprice CHECK(sale_price >= purchase_price)
 );
 
+-- alter table created
+ALTER TABLE companies 
+ADD COLUMN phone VARCHAR(15);
+ 
+ALTER TABLE companies
+ADD COLUMN employee_count INT NOT NULL DEFAULT 1;
+
+
