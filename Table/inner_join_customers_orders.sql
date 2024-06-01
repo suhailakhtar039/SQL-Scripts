@@ -93,3 +93,28 @@ INSERT INTO papers (student_id, title, grade ) VALUES
 (2, 'Russian Lit Through The Ages', 94),
 (2, 'De Montaigne and The Art of The Essay', 98),
 (4, 'Borges and Magical Realism', 89);
+
+-- simple join
+SELECT 
+    first_name, title, grade
+FROM
+    students
+        JOIN
+    papers ON papers.student_id = students.id;
+    
+    
+-- left join
+SELECT 
+    first_name, title, grade
+FROM
+    students
+        LEFT JOIN
+    papers ON papers.student_id = students.id;
+    
+-- using ifnull
+SELECT 
+    first_name, IFNULL(title, 'Missing'), IFNULL(grade, 0)
+FROM
+    students
+        LEFT JOIN
+    papers ON papers.student_id = students.id
