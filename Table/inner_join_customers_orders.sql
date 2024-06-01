@@ -48,6 +48,12 @@ FROM
         LEFT JOIN
     customers ON customers.id = orders.customer_id;    
 -- above two differs
-
-    
+-- finding if null
+SELECT 
+    first_name, last_name, IFNULL(SUM(amount), 0)
+FROM
+    customers
+        LEFT JOIN
+    orders ON customers.id = orders.customer_id
+GROUP BY first_name , last_name;    
     
