@@ -36,3 +36,10 @@ VALUES('2000-12-30', 45.98, 3);
 
 SELECT * FROM customers;
 SELECT * FROM orders;
+
+-- finding the customer in two steps
+-- 1. finding id
+select id from customers where last_name = 'george';
+
+-- 2. using above id to find orders
+select * from orders where customer_id = 1;
