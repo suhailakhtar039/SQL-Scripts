@@ -63,4 +63,8 @@ SELECT
 FROM
     customers
         RIGHT JOIN
-    orders ON customers.id = orders.customer_id;    
+    orders ON customers.id = orders.customer_id;
+    
+-- checking cascade
+delete from customers where last_name='george';
+select * from orders;
