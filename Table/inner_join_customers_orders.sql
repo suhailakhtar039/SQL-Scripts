@@ -113,8 +113,31 @@ FROM
     
 -- using ifnull
 SELECT 
-    first_name, IFNULL(title, 'Missing'), IFNULL(grade, 0)
+    first_name, IFNULL(title, 'Missing') as title, IFNULL(grade, 0) as grade
+FROM
+    students
+        LEFT JOIN
+    papers ON papers.student_id = students.id;
+    
+-- using group by
+SELECT 
+    first_name, IFNULL(AVG(grade), 0) as average
 FROM
     students
         LEFT JOIN
     papers ON papers.student_id = students.id
+GROUP BY first_name;
+
+-- using case and when
+SELECT 
+    first_name,
+    IFNULL(AVG(grade), 0) AS average,
+    CASE
+        WHEN IFNULL(AVG(grade), 0) > 75 THEN 'Passing'
+        ELSE 'failing'
+    END AS passing_status
+FROM
+    students
+        LEFT JOIN
+    papers ON papers.student_id = students.id
+GROUP BY first_name;
