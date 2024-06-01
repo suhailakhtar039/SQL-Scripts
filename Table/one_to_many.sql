@@ -43,3 +43,7 @@ select id from customers where last_name = 'george';
 
 -- 2. using above id to find orders
 select * from orders where customer_id = 1;
+
+-- using cross joind or cartesian output
+-- it is very less used
+select * from orders, customers;
