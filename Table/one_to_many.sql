@@ -32,4 +32,7 @@ VALUES ('2016-02-10', 99.99, 1),
        
 -- adding customer_id which doesn't exist into customers table
 INSERT INTO orders(order_date, amount, customer_id)
-VALUES('2000-12-30', 45.98, 123);
+VALUES('2000-12-30', 45.98, 3);
+
+SELECT * FROM customers;
+SELECT * FROM orders;
