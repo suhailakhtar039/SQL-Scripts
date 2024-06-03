@@ -60,12 +60,12 @@ GROUP BY genre;
 SELECT 
     first_name,
     last_name,
-    COUNT(*) AS count,
+    COUNT(rating) AS count,
     IFNULL(MIN(rating), 0) AS min,
     IFNULL(MAX(rating), 0) AS max,
     IFNULL(AVG(rating), 0) AS avg,
     CASE
-        WHEN IFNULL(MIN(rating), 0) != 0 THEN 'Active'
+        WHEN COUNT(rating) != 0 THEN 'Active'
         ELSE 'Inactive'
     END AS status
 FROM
