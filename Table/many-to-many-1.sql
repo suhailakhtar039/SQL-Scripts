@@ -56,7 +56,23 @@ FROM
     reviews ON series.id = reviews.series_id
 GROUP BY genre;
 
-
+-- sixth
+SELECT 
+    first_name,
+    last_name,
+    COUNT(*) AS count,
+    IFNULL(MIN(rating), 0) AS min,
+    IFNULL(MAX(rating), 0) AS max,
+    IFNULL(AVG(rating), 0) AS avg,
+    CASE
+        WHEN IFNULL(MIN(rating), 0) != 0 THEN 'Active'
+        ELSE 'Inactive'
+    END AS status
+FROM
+    reviewers
+        LEFT JOIN
+    reviews ON reviewers.id = reviews.reviewer_id
+GROUP BY first_name , last_name;
 
 
 
