@@ -89,6 +89,16 @@ FROM
     reviews ON reviewers.id = reviews.reviewer_id
 GROUP BY first_name , last_name;
 
+-- seventh
+SELECT 
+    title, rating, CONCAT(first_name,' ', last_name) AS reviewer
+FROM
+    series
+        JOIN
+    reviews ON series.id = reviews.series_id
+        JOIN
+    reviewers ON reviews.reviewer_id = reviewers.id;
+
 
 
 
