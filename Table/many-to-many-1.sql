@@ -57,6 +57,24 @@ FROM
 GROUP BY genre;
 
 -- sixth
+-- SELECT 
+--     first_name,
+--     last_name,
+--     COUNT(rating) AS count,
+--     IFNULL(MIN(rating), 0) AS min,
+--     IFNULL(MAX(rating), 0) AS max,
+--     IFNULL(AVG(rating), 0) AS avg,
+--     CASE
+--         WHEN COUNT(rating) != 0 THEN 'Active'
+--         ELSE 'Inactive'
+--     END AS status
+-- FROM
+--     reviewers
+--         LEFT JOIN
+--     reviews ON reviewers.id = reviews.reviewer_id
+-- GROUP BY first_name , last_name;
+
+-- 2nd approach for case and end
 SELECT 
     first_name,
     last_name,
@@ -64,10 +82,7 @@ SELECT
     IFNULL(MIN(rating), 0) AS min,
     IFNULL(MAX(rating), 0) AS max,
     IFNULL(AVG(rating), 0) AS avg,
-    CASE
-        WHEN COUNT(rating) != 0 THEN 'Active'
-        ELSE 'Inactive'
-    END AS status
+    IF(count(rating)>0, 'ACTIVE', 'INACTIVE') as status
 FROM
     reviewers
         LEFT JOIN
