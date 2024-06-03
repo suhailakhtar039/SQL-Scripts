@@ -46,6 +46,15 @@ FROM
     series ON series.id = reviews.series_id
 WHERE
     rating IS NULL;
+    
+-- fifth
+SELECT 
+    genre, ROUND(AVG(rating), 2)
+FROM
+    series
+        JOIN
+    reviews ON series.id = reviews.series_id
+GROUP BY genre;
 
 
 
