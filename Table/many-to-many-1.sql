@@ -12,7 +12,7 @@ FROM
 
 -- second
 SELECT 
-    title, AVG(rating) AS avg_rating
+    title, ROUND(AVG(rating), 2) AS avg_rating
 FROM
     series
         JOIN
