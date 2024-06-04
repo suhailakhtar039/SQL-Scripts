@@ -109,8 +109,12 @@ CREATE VIEW full_reviews AS
             JOIN
         reviews ON series.id = reviews.series_id
             JOIN
-        reviewers ON reviews.reviewer_id = reviewers.id;
+        reviewers ON reviews.reviewer_id = reviewers.idfull_reviews;
 
+-- operation on view
+select * from full_reviews;
+select * from full_reviews where title like '%ar%';
+select genre, avg(rating) from full_reviews group by genre;
 
 
 
