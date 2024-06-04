@@ -100,6 +100,16 @@ FROM
     reviewers ON reviews.reviewer_id = reviewers.id;
 
 
+-- creating reviews
+CREATE VIEW full_reviews AS
+    SELECT 
+        title, released_year, genre, rating, first_name, last_name
+    FROM
+        series
+            JOIN
+        reviews ON series.id = reviews.series_id
+            JOIN
+        reviewers ON reviews.reviewer_id = reviewers.id;
 
 
 
