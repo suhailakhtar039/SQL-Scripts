@@ -61,6 +61,14 @@ SELECT
     MIN(salary) OVER(PARTITION BY department ORDER BY salary DESC) as rolling_min
 FROM employees;
 
+-- working of rank
+SELECT
+	emp_no,
+    department,
+    salary,
+    RANK() OVER(ORDER BY salary DESC) AS overall_salary_rank
+FROM employees;
+
 
 
 
