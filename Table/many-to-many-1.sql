@@ -142,6 +142,7 @@ HAVING COUNT(rating) > 1;
 select avg(rating) from full_reviews;
 select title, avg(rating) from full_reviews group by title;
 select title, avg(rating) from full_reviews group by title with rollup;
+select title, count(rating) from full_reviews group by title with rollup;
 
 
 
