@@ -38,6 +38,14 @@ SELECT
 	emp_no, department, salary, SUM(salary) OVER(PARTITION BY department) AS sum_department
 FROM employees;
 
+SELECT
+	emp_no,
+    department,
+    salary,
+    SUM(salary) OVER(PARTITION BY department ORDER BY SALARY DESC) AS sum_department,
+    SUM(salary) OVER(PARTITION BY department) AS total_payroll
+FROM employees;
+
 
 
 
