@@ -138,7 +138,10 @@ FROM
 GROUP BY title
 HAVING COUNT(rating) > 1;
 
-
+-- roll up modifier
+select avg(rating) from full_reviews;
+select title, avg(rating) from full_reviews group by title;
+select title, avg(rating) from full_reviews group by title with rollup;
 
 
 
