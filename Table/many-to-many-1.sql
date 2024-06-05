@@ -116,6 +116,18 @@ select * from full_reviews;
 select * from full_reviews where title like '%ar%';
 select genre, avg(rating) from full_reviews group by genre;
 
+-- view creating example
+CREATE VIEW ordered_series AS
+SELECT * FROM series ORDER BY released_year;
+ 
+CREATE OR REPLACE VIEW ordered_series AS
+SELECT * FROM series ORDER BY released_year DESC;
+ 
+ALTER VIEW ordered_series AS
+SELECT * FROM series ORDER BY released_year;
+ 
+DROP VIEW ordered_series;
+
 
 
 
