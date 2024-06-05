@@ -162,6 +162,9 @@ GROUP BY released_year , genre , first_name WITH ROLLUP;
 
 -- modes in sql
 SELECT @@GLOBAL .sql_mode;
-select @@SESSION.sql_mode;
+SELECT @@SESSION .sql_mode;
+SELECT 3/0;
+show warnings;
+SET SESSION sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,NO_ENGINE_SUBSTITUTION';
 
 
