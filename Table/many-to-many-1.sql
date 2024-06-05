@@ -160,5 +160,8 @@ FROM
     full_reviews
 GROUP BY released_year , genre , first_name WITH ROLLUP;
 
+-- modes in sql
+SELECT @@GLOBAL .sql_mode;
+select @@SESSION.sql_mode;
 
 
