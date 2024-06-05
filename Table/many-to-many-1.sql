@@ -109,7 +109,7 @@ CREATE VIEW full_reviews AS
             JOIN
         reviews ON series.id = reviews.series_id
             JOIN
-        reviewers ON reviews.reviewer_id = reviewers.idfull_reviews;
+        reviewers ON reviews.reviewer_id = reviewers.id;
 
 -- operation on view
 select * from full_reviews;
@@ -127,6 +127,16 @@ ALTER VIEW ordered_series AS
 SELECT * FROM series ORDER BY released_year;
  
 DROP VIEW ordered_series;
+
+-- USING group by HAVING
+select * from full_reviews;
+
+SELECT 
+    title, AVG(rating)
+FROM
+    full_reviews
+GROUP BY title
+HAVING COUNT(rating) > 1;
 
 
 
