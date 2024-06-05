@@ -42,13 +42,24 @@ SELECT
 	emp_no,
     department,
     salary,
-    SUM(salary) OVER(PARTITION BY department ORDER BY SALARY DESC) AS sum_department,
+    SUM(salary) OVER(PARTITION BY department) AS sum_department,
+    SUM(salary) OVER() AS total_payroll
+FROM employees;
+
+SELECT
+	emp_no,
+    department,
+    salary,
+    SUM(salary) OVER(PARTITION BY department ORDER BY salary DESC) AS sum_department,
     SUM(salary) OVER(PARTITION BY department) AS total_payroll
 FROM employees;
 
-
-
-
+SELECT 
+    emp_no, 
+    department, 
+    salary, 
+    MIN(salary) OVER(PARTITION BY department ORDER BY salary DESC) as rolling_min
+FROM employees;
 
 
 
