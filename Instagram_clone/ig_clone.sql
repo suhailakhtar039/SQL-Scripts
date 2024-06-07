@@ -7,3 +7,9 @@ CREATE TABLE users (
     created_at TIMESTAMP DEFAULT NOW()
 );
 
+INSERT INTO users(username) VALUES
+('Blue The Cat'),
+('CharlieBrown'),
+('ColtSteele');
+
+SELECT * FROM users;
