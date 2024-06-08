@@ -55,3 +55,12 @@ CREATE TABLE follows (
         REFERENCES userd (id),
 	PRIMARY KEY(follower_id, followee_id)
 );
+
+CREATE TABLE tags (
+  id INTEGER AUTO_INCREMENT PRIMARY KEY,
+  tag_name VARCHAR(255) UNIQUE,
+  created_at TIMESTAMP DEFAULT NOW()
+);
+
+
+
