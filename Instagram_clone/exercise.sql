@@ -14,3 +14,13 @@ FROM
     users
 GROUP BY DAYNAME(created_at)
 ORDER BY cnt_day DESC;
+
+-- 3 find users who have never posted a photo
+SELECT 
+    username
+FROM
+    users
+        LEFT JOIN
+    photos ON users.id = photos.user_id
+WHERE
+    photos.user_id IS NULL;
