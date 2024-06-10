@@ -71,3 +71,15 @@ GROUP  BY tags.id
 ORDER  BY total DESC 
 LIMIT  5; 
 
+-- find users who have liked every single photo
+SELECT 
+    username, COUNT(username) AS num_likes
+FROM
+    users
+        JOIN
+    likes ON users.id = likes.user_id
+GROUP BY users.id
+HAVING num_likes = (SELECT 
+        COUNT(*)
+    FROM
+        photos);
