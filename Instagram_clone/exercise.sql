@@ -49,4 +49,15 @@ SELECT
             COUNT(*)
         FROM
             users)) AS avg;
+            
+-- top 5 most commonly used hashtags
+SELECT 
+    tag_name, COUNT(tag_name) AS cnt
+FROM
+    tags
+        JOIN
+    photo_tags ON tags.id = photo_tags.tag_id
+GROUP BY tag_name
+ORDER BY cnt DESC
+LIMIT 5;
 
