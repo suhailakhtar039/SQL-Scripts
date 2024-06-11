@@ -13,9 +13,12 @@ var connection = mysql.createConnection({
 });
 
 // var q = 'SELECT 1+5';
-connection.query('SELECT 1 + 5 AS ANSWER', function(error, results, fields){
+var q = 'SELECT CURTIME() AS time, CURDATE() AS date, NOW() AS now';
+connection.query(q, function(error, results, fields){
     if(error) throw error;
-    console.log('The solution is ' + results[0].toString)
+    console.log(results[0].time);
+    console.log(results[0].date.toString());
+    console.log(results[0].now.toString());
 })
 
 connection.end();
