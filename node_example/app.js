@@ -13,10 +13,10 @@ var connection = mysql.createConnection({
 });
 
 // var q = 'SELECT 1+5';
-var q = 'SELECT * FROM users';
+var q = 'SELECT COUNT(*) as total FROM users';
 connection.query(q, function(error, results, fields){
     if(error) throw error;
-    console.log(results[0].email);
+    console.log(results[0].total);
 })
 
 connection.end();
