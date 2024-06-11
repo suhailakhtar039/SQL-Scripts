@@ -13,12 +13,12 @@ var connection = mysql.createConnection({
 });
 
 // var q = 'SELECT 1+5';
-var q = 'SELECT 1+1';
+var q = 'SELECT CURTIME() AS time, CURDATE() AS date, NOW() AS now';
 connection.query(q, function(error, results, fields){
     if(error) throw error;
-    console.log(results[0]);
-    // console.log(results[0].date.toString());
-    // console.log(results[0].now.toString());
+    console.log(results[0].time);
+    console.log(results[0].date.toString());
+    console.log(results[0].now.toString());
 })
 
 connection.end();
