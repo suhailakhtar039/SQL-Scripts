@@ -3,5 +3,7 @@
 
 //using faker
 var { faker } = require('@faker-js/faker');
-email = faker.person.fullName();
-console.log(email)
+var mysql = require('mysql2');
+
+fullname = faker.person.fullName();
+console.log(fullname)
