@@ -11,3 +11,11 @@ var connection = mysql.createConnection({
   password: 'Suh@il786',
   database: 'check_with_node'
 });
+
+var q = 'select curdate()';
+connection.query(q, function(error, results, fields){
+    if(error) throw error;
+    console.log('The solution is ' + results.toString())
+})
+
+connection.end();
