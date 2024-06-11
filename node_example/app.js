@@ -3,3 +3,5 @@
 
 //using faker
 var { faker } = require('@faker-js/faker');
+email = faker.person.fullName();
+console.log(email)
