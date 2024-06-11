@@ -12,10 +12,10 @@ var connection = mysql.createConnection({
   database: 'check_with_node'
 });
 
-var q = 'select curdate()';
-connection.query(q, function(error, results, fields){
+// var q = 'SELECT 1+5';
+connection.query('SELECT 1 + 5 AS ANSWER', function(error, results, fields){
     if(error) throw error;
-    console.log('The solution is ' + results.toString())
+    console.log('The solution is ' + results[0].toString)
 })
 
 connection.end();
