@@ -5,5 +5,9 @@
 var { faker } = require('@faker-js/faker');
 var mysql = require('mysql2');
 
-fullname = faker.person.fullName();
-console.log(fullname)
+var connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'Suh@il786',
+  database: 'check_with_node'
+});
