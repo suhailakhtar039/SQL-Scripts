@@ -22,13 +22,29 @@ var connection = mysql.createConnection({
 // })
 
 // inserting data dynamically
-var person = {
-    email: faker.internet.email(),
-    created_at: faker.date.past()
-};
-connection.query('INSERT INTO users SET ?', person, function(err, result){
-    if(err) throw err;
-    console.log(result);
+// var person = {
+//     email: faker.internet.email(),
+//     created_at: faker.date.past()
+// };
+// connection.query('INSERT INTO users SET ?', person, function(err, result){
+//     if(err) throw err;
+//     console.log(result);
+// });
+
+// inserting 500 data users
+var data = [];
+for(var i = 0; i < 500; i++){
+    data.push([
+        faker.internet.email(),
+        faker.date.past()
+    ]);
+}
+ 
+var q = 'INSERT INTO users (email, created_at) VALUES ?';
+ 
+connection.query(q, [data], function(err, result) {
+  console.log(err);
+  console.log(result);
 });
 
 connection.end();
