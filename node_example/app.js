@@ -22,7 +22,10 @@ var connection = mysql.createConnection({
 // })
 
 // inserting data dynamically
-var person = {email: faker.internet.email()};
+var person = {
+    email: faker.internet.email(),
+    created_at: faker.date.past()
+};
 connection.query('INSERT INTO users SET ?', person, function(err, result){
     if(err) throw err;
     console.log(result);
