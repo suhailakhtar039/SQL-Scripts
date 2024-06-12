@@ -13,10 +13,11 @@ var connection = mysql.createConnection({
 });
 
 // var q = 'SELECT 1+5';
-var q = 'SELECT COUNT(*) as total FROM users';
+// var q = 'SELECT COUNT(*) as total FROM users';
+var q = 'INSERT INTO users(email) VALUES("abc@gmail.com");';
 connection.query(q, function(error, results, fields){
     if(error) throw error;
-    console.log(results[0].total);
+    console.log(results);
 })
 
 connection.end();
