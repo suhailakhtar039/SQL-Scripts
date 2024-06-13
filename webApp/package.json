@@ -9,6 +9,9 @@
   "author": "suhail akhtar",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "faker": "^6.6.6",
+    "fakes": "^0.3.5",
+    "mysql2": "^3.10.0"
   }
 }
