@@ -1,4 +1,8 @@
 -- min date
+SELECT
+    DATE_FORMAT(MIN(created_at), "%M %D %Y") as earliest_date
+FROM users;
+
 -- email of earliest user
 SELECT email
 FROM users
@@ -14,7 +18,6 @@ group by month;
 select count(*)
 from users
 where email like '%yahoo.com%';
-
 
 -- different email
 SELECT
