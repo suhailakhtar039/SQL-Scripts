@@ -14,3 +14,17 @@ group by month;
 select count(*)
 from users
 where email like '%yahoo.com%';
+
+
+-- different email
+SELECT
+    CASE
+        WHEN email like '%gmail.com' THEN 'gmail'
+        WHEN email like '%yahoo.com' THEN 'yahoo'
+        WHEN email like '%hotmail.com' THEN 'hotmail'
+        ELSE 'other'
+    end as provider,
+    count(*) as total_users
+FROM users
+GROUP BY provider
+ORDER BY total_users DESC;
