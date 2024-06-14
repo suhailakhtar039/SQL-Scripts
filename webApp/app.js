@@ -10,6 +10,10 @@ app.get('/joke', (req, res) =>{
     console.log("see me in the console");
 })
 
+app.get('/random_num', (req,res)=>{
+    res.send("7");
+})
+
 app.listen(8080, () =>{
     console.log('listening')
 })
