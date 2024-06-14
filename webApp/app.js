@@ -10,7 +10,12 @@ var connection = mysql.createConnection({
 });
 
 app.get('/', (req, res) =>{
-    res.send("HELLO FROM OUR WEB APP");
+    var q = "SELECT COUNT(*) AS count FROM users";
+    connection.query(q, (err, results)=>{
+        if(err) throw err;
+        console.log(results[0].count);
+    })
+    // res.send("HELLO FROM OUR WEB APP");
 })
 
 app.get('/joke', (req, res) =>{
