@@ -13,7 +13,8 @@ app.get('/', (req, res) =>{
     var q = "SELECT COUNT(*) AS count FROM users";
     connection.query(q, (err, results)=>{
         if(err) throw err;
-        console.log(results[0].count);
+        var count = results[0].count;
+        res.send("We have " + count + " users in our db");
     })
     // res.send("HELLO FROM OUR WEB APP");
 })
