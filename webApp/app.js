@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var mysql = require('mysql2');
+var bodyParser = require('body-parser')
  
 var connection = mysql.createConnection({
   host: 'localhost',
@@ -10,6 +11,8 @@ var connection = mysql.createConnection({
 });
 
 app.set("view engine", "ejs");
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(express.static(__dirname + "/public"));
 
 app.get('/', (req, res) =>{
     var q = "SELECT COUNT(*) AS count FROM users";
@@ -33,7 +36,12 @@ app.get('/random_num', (req,res)=>{
 })
 
 app.post('/register', (req, res)=>{
-    console.log("hello")
+    var person = {email: req.body.email};
+    connection.query("INSERT INTO users SET ?", person, (err, results)=>{
+        if(err) throw err;
+        // res.send("We have " + count + " users in our db");
+        res.redirect("/");
+    })
 })
 
 app.listen(8080, () =>{
