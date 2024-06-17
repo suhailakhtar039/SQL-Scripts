@@ -32,6 +32,10 @@ app.get('/random_num', (req,res)=>{
     res.send("Your lucky number is " + num);
 })
 
+app.post('/register', (req, res)=>{
+    console.log("hello")
+})
+
 app.listen(8080, () =>{
     console.log('listening')
 })
