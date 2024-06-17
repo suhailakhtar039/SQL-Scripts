@@ -9,6 +9,8 @@ var connection = mysql.createConnection({
   database: 'check_with_node'
 });
 
+app.set("view engine", "ejs");
+
 app.get('/', (req, res) =>{
     var q = "SELECT COUNT(*) AS count FROM users";
     connection.query(q, (err, results)=>{
