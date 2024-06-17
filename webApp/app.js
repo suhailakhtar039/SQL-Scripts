@@ -17,7 +17,7 @@ app.get('/', (req, res) =>{
         if(err) throw err;
         var count = results[0].count;
         // res.send("We have " + count + " users in our db");
-        res.render("home")
+        res.render("home", {count:count})
     })
     // res.send("HELLO FROM OUR WEB APP");
 })
